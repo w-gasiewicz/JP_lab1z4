@@ -1,9 +1,7 @@
 package er;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -40,7 +38,6 @@ public class Sets implements Serializable {
 	}
 	public void generateTreeSet(int x)
 	{long start=System.nanoTime();
-//	List<Car> carTab=new ArrayList<Car>();
 	int i=0;
 		do
 		{
@@ -51,7 +48,6 @@ public class Sets implements Serializable {
 		
 		i++;
 		}while(i<x);
-		//carsTreeSet.addAll(carTab);
 	long stop=System.nanoTime();
 	long time=stop-start;
 	System.out.println("Auta wygenerowane do TreeSet w czasie: "+time+" nanosekund = "+time/1000000+"milisekund.");
@@ -73,4 +69,31 @@ public class Sets implements Serializable {
 		}
 		System.out.println("Auta zostaly wyswietlone!");
 	}
+	
+	void searchSet(String name,Double price1,Double price2 ,int year1,int year2)
+	 {
+	System.out.println("Wyszukanie w HashSet: ");
+	 int test=0;
+	 String tempName;
+	 Double tempPrice;
+	 int tempYear;
+	 System.out.println("Auta pasuj¹ce do zadanego wyszukiwania: ");
+	 for(Car car:carsSet)
+	 	{	
+	 	tempName=car.getName();
+	 	tempPrice=car.getPrice();
+	 	tempYear=car.getYear();
+	 		
+	 		if (tempName.equals(name) && tempPrice>=price1 && tempPrice<=price2 && tempYear>=year1 && tempYear<=year2 )
+	 		{
+	 			
+	 			System.out.println("MARKA: "+ tempName+" ROK PRODUKCJI: "+tempYear+" CENA: "+tempPrice);
+	 			test++;
+	 		}
+	 	}
+	 	if(test==0)
+	 	{
+	 		System.out.println("Nie uda³o siê dopasowaæ ¿adnych aut do zadanego wyszukiwania.");
+	 	}
+	 }
 }

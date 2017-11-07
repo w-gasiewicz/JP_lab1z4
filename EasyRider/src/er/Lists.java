@@ -81,7 +81,7 @@ public class Lists {
 	 Double tempPrice;
 	 int tempYear;
 	 System.out.println("Auta pasuj¹ce do zadanego wyszukiwania: ");
-	 	for(int i=0;i<carsArray.size();i++)
+	 	for(int i=0;i<cars.size();i++)
 	 	{	
 	 	car=getCar().get(i);
 	 	tempName=car.getName();
@@ -110,7 +110,7 @@ public class Lists {
 	 Double tempPrice;
 	 int tempYear;
 	 System.out.println("Auta pasuj¹ce do zadanego wyszukiwania: ");
-	 	for(int i=0;i<cars.size();i++)
+	 	for(int i=0;i<carsArray.size();i++)
 	 	{	
 	 	car=getCarArray().get(i);
 	 	tempName=car.getName();

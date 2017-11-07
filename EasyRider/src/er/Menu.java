@@ -48,12 +48,12 @@ public class Menu {
 		switch(choose){
 		case 0: System.exit(0);
 		case 1: list.generate(car_number); list.generateArrayList(car_number); break;
-		case 2:  set.generateSet(car_number); set.generateTreeSet(car_number); break;
+		case 2: set.generateSet(car_number); /*set.generateTreeSet(car_number);*/ break;
 		case 3: map.generateMap(car_number); map.generateLHMap(car_number);break;
 		case 4: list.showlist(); list.showArrayList(); break;
 		case 5: set.showset(); set.showTreeSet(); break;
 		case 6: map.showmap(); map.showLHMap(); break;
-		case 7: tofind(); list.searchList(name, price1, price2, year1, year2); list.searchArrayList(name, price1, price2, car_number, car_number); break;
+		case 7: tofind(); list.searchList(name, price1, price2, year1, year2); list.searchArrayList(name, price1, price2, year1, year2); set.searchSet(name, price1, price2, year1, year2);map.searchMap(name, price1, price2, year1, year2); map.searchLHMap(name, price1, price2, year1, year2);break;
 		default: break;
 		}
 	}
