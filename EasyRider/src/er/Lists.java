@@ -129,4 +129,19 @@ public class Lists {
 	 		System.out.println("Nie uda³o siê dopasowaæ ¿adnych aut do zadanego wyszukiwania.");
 	 	}
 	 }
+	 void deleteFromList(int x){
+		 int test=0;
+		 try{cars.remove(x);}
+		 catch(IndexOutOfBoundsException e){System.out.println("Na zadanej pozycji nie istnieje zaden samochod!"); test++;}
+		 if(test==0)
+		 System.out.println("Wybrane auto zostalo poprawnie usuniete z LinkedList!");
+	 }
+	 void deleteFromArList(int x){
+		 int test=0;
+		 try{carsArray.remove(x);}
+		 catch(IndexOutOfBoundsException e){System.out.println("Na zadanej pozycji nie istnieje zaden samochod!");test++;}
+		 if(test==0)
+		 System.out.println("Wybrane auto zostalo poprawnie usuniete z ArrayList!");
+	 }
+	 
 }

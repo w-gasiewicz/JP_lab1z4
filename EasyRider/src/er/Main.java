@@ -18,9 +18,7 @@ public class Main {
 		
 		System.out.print("Podaj ile aut chcesz wygenerowac: ");
 		x=get.nextInt();
-		menu.dialog(x);
-		
-		
+		menu.dialog(x);		
 	}
 
 }
