@@ -2,7 +2,7 @@ package er;
 
 import java.util.Random;
 
-public class Car {
+public class Car implements Comparable<Car> {
 
 	Name cn;
 	String name;
@@ -61,5 +61,14 @@ public String getName() {return name;}
 public int getYear() {return year;}
 
 public double getPrice() {return price;}
+
+@Override
+public int compareTo(Car o) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+
+
 
 }
