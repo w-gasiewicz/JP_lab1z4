@@ -58,21 +58,49 @@ public class Maps{
 	Car showcar;
 	int x=0;
 	for(Entry<Integer, Car> entry: entrySet) {
+		try{
 		 showcar = carsMap.get(x); 
         System.out.println("Numer klucza: " + entry.getKey() + "\n Marka: "+showcar.getName()+"| Cena: "+ showcar.getPrice()+"| Rok produkcji: "+showcar.getYear() );
     x++;
+		}
+		catch(NullPointerException e){System.out.println("Auto na pozycji: "+x+" zostalo usuniete.");
+		int actualnumber=x;
+		x=x+1;
+		for(int i=actualnumber;i<entrySet.size();i++)
+		{
+		showcar=carsMap.get(x);
+		System.out.println("Numer klucza: " + x + "\n Marka: "+showcar.getName()+"| Cena: "+ showcar.getPrice()+"| Rok produkcji: "+showcar.getYear() );
+	    x++;
+		}
+		break;
+		}
 	}
 	System.out.println("Auta zostaly wyswietlone!");
 	}
+	
 	void showLHMap()
 	{System.out.println("LinkedHash Map: ");
 	Set<Entry<Integer, Car>> entrySet = carsLHMap.entrySet();
 	Car showcar;
 	int x=0;
 	for(Entry<Integer, Car> entry: entrySet) {
+		try{
 		 showcar = carsLHMap.get(x); 
         System.out.println("Numer klucza: " + entry.getKey() + "\n Marka: "+showcar.getName()+"| Cena: "+ showcar.getPrice()+"| Rok produkcji: "+showcar.getYear() );
     x++;
+		}
+		catch(NullPointerException e){
+			System.out.println("Auto na pozycji: "+x+" zostalo usuniete.");
+			int actualnumber=x;
+			x=x+1;
+			for(int i=actualnumber;i<entrySet.size();i++)
+			{
+			showcar=carsLHMap.get(x);
+			System.out.println("Numer klucza: " + x + "\n Marka: "+showcar.getName()+"| Cena: "+ showcar.getPrice()+"| Rok produkcji: "+showcar.getYear() );
+		    x++;
+			}
+			break;
+		}
 	}
 	System.out.println("Auta zostaly wyswietlone!");
 	}
@@ -134,5 +162,14 @@ public class Maps{
 	 		System.out.println("Nie uda³o siê dopasowaæ ¿adnych aut do zadanego wyszukiwania.");
 	 	}
 	 }
-	 
+	 void removeFromMap(int x)
+	 {
+		 carsMap.remove(x);
+		 System.out.println("Wybrane auto zostalo poprawnie usuniete z HashMap!");
+	 }
+	 void removeFromLHMap(int x)
+	 {
+		 carsLHMap.remove(x);
+		 System.out.println("Wybrane auto zostalo poprawnie usuniete z LinkedHashMap!");
+	 }
 }
