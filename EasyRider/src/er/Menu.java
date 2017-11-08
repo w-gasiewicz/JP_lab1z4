@@ -60,7 +60,7 @@ public class Menu {
 		case 4: list.showlist(); list.showArrayList(); break;
 		case 5: set.showset(); set.showTreeSet(); break;
 		case 6: map.showmap(); map.showLHMap(); break;
-		case 7: tofind(); list.searchList(name, price1, price2, year1, year2); list.searchArrayList(name, price1, price2, year1, year2); set.searchSet(name, price1, price2, year1, year2);map.searchMap(name, price1, price2, year1, year2); map.searchLHMap(name, price1, price2, year1, year2);break;
+		case 7: tofind(); list.searchList(name, price1, price2, year1, year2); list.searchArrayList(name, price1, price2, year1, year2); set.searchSet(name, price1, price2, year1, year2);set.searchTreeSet(name, price1, price2, year1, year2);map.searchMap(name, price1, price2, year1, year2); map.searchLHMap(name, price1, price2, year1, year2);break;
 		case 8: carToRemove(); list.deleteFromList(cardelete); list.deleteFromArList(cardelete); set.deleteFromSet(cardelete); set.deleteFromTreeSet(cardelete); map.removeFromMap(cardelete); map.removeFromLHMap(cardelete); break;
 		default: break;
 		}
