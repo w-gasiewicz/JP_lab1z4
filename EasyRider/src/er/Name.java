@@ -2,6 +2,6 @@ package er;
 
 public enum Name {
 	
-		POLONEZ, FIAT, SYRENA, MERCEDES
+		POLONEZ, FIAT, SYRENA, MERCEDES, AUDI
 	
 }
